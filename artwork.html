@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<head>
+  <title>BHUIYAN</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="nyu_final.css">
+
+
+<!--<script type="text/javascript" src="nyfinal.js"></script>-->
+
+</head>
+
+<body onLoad="setInterval('run()',1000);">
+<div class="container">
+  <div class="row">
+    
+    <ul class="list-inline">
+      <li><a id="my-work" href="https://my.adp.com" class="main-nav__link">MYWORK</a></li>
+       <li><a id="bbx-ybpicture" href="#!/agency" class="main-nav__link">SUDOERS</a></li>
+      <li><a id="bbx-services" href="artwork.html" class="main-nav__link">ARTWORK</a></li>
+      <li><a id="bbx-videos" href="#!/agency" class="main-nav__link">VIDEO</a></li>
+      <li><a id="bbx-contact" href="contact-me.html" class="main-nav__link" >CONTACT-ME</a></li>
+    </ul>
+    <div class="img-rounded">
+      <a id="yb-home" href="nyu_FinalProject.html" class="main-nav__link">
+        <img src="img/fire1.gif" text="YOUSUF"alt="Nature" style="width:170px;height:60px">
+      </a>
+    </div>
+      </div>
+<p style="display:inline; color:white; font:bold 14pt">THESE ARE MY OWN ARTWORK<br> BUILD IT WITH BARE HANDS ;)</p>
+
+<div style='position:absolute; left:200px'>
+
+<br>
+<img id=slide src='img2/d2.jpg' style="width:500px; height:400px;">
+<br>
+
+</div>
+
+<script>
+
+//---------------------------------------------------------------------------------
+
+var next  = 1;				   	//the next image number
+var total = 11;                                 //the total number of images
+
+function run() 
+{
+    next = next+1;    
+
+    if (next > total)                              	   	//if at the end
+        next = 1;                                  	   	//reset number to 1 to loop
+
+    document.getElementById('slide').src = 'img2/d' + next + '.jpg';   	//Load next image into slideShow
+}
+
+</script>
+
+</body>
+</html>

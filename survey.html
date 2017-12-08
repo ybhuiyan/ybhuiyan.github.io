@@ -1,0 +1,234 @@
+
+
+<!DOCTYPE html>
+<html class="yb">
+<head><title>Your constructive feedback & cretecisum</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<head>
+<style>
+div.background
+{
+  background: url("./img/bbb1.jpg") repeat;
+  border: 2px solid black;
+}
+
+div.transbox p
+{
+  margin: 5%;
+  font-weight: bold;
+  color: red;
+}
+</style>
+</head>
+
+
+
+<body>
+<h2>Please provide your constructive feedback</h2>
+	<table>
+<form name=form1 method=POST action=/cgi-bin/sultans/formProc>
+<legend>Enter Information Below</legend>
+	First Name: <br>
+	<input type="text" name="firstname" size="40" placeholder="First Name">
+	<br><br>
+	Last Name: <br>
+	<input type="text" name="lastname" size="40" style="width:120px" placeholder="Last Name">
+	<br><br>
+	Primary Address: <br>
+	<input type="text" name="lastname" size="40" style="hight:120px","width:120px" placeholder="Last Name">
+	<br><br>
+		Last Name: <br>
+	<input type="text" name="lastname" size="40" style="width:120px" placeholder="Last Name">
+	<br><br>
+	Email Addess: <br>
+	<input type="text" name"email" placeholder="Email address.."><br>
+	<td id=f3><b>Gender<br><td><input type=radio name=sex value='M'>Male 
+        <input type=radio name=sex value='F'>Female 
+   <tr><br>
+   	<td id=f4><b>Enter Status...  <td><input type=checkbox name=status id=sgl value='S'>Single
+                                  <input type=checkbox name=status id=mrd value='M'>Married
+                                  <input type=checkbox name=status id=chd value='C'>With Children                       
+<tr>
+	
+
+	<tr>
+		<td><p>Please select highest level of Education:<p>
+		<select name="education" id="slctsingle" class="input" style="width:140">
+			<option id=non value="0">chose one</option>
+			<option id="JH" value="JH">Junior H.S</option>
+			<option id="HS" value="HS">High School</option>
+			<option id="AS" value="AS">Associate</option>
+			<option id="BA" value="BA">Bachelore</option>
+			<option id="MA" value="MA">Graduate (MS)</option>
+			<option id="PHD" value="PHD">Phd (Doctorate)</option>
+		</select>
+	</tr>
+	<tr>
+<td id=f6><b>Enter Hobbies... <td><select name=hobby id=slctMulti size=3 multiple class=input style='width:160'>
+                                      <option value='read'>Reading</option> 
+                                      <option value='tv'>Television and Movies</option>
+                                      <option value='art'>Art and Theatre</option>  
+                                      <option value='sport'>Playing Sports</option> 
+                                      <option value='travel'>Traveling</option> 
+                                      <option value='shop'>Shopping</option>
+                                      <option value='sleep'>Relaxing and Sleeping</option>
+                                 </select>
+
+<tr height=30>
+	<tr>
+<td><input type=submit value='       Go        ' onClick=" return validate()">
+<td><input type=reset  value='Clear'>  
+</table>
+<p id=f7 style="color:red;"></p>
+</form>
+
+
+
+
+
+<script>
+
+<!-- JavaScript code to validate the form entry fields ----------------------------->
+
+function validate() {
+
+    errorMsg = "";
+    document.getElementById("f1").style.color = "black";
+    document.getElementById("f2").style.color = "black";
+    document.getElementById("f3").style.color = "black";
+    document.getElementById("f4").style.color = "black";
+    document.getElementById("f5").style.color = "black";
+    document.getElementById("f6").style.color = "black";
+    document.getElementById("f7").innerHTML   = "";
+
+    if (document.form1.fullname.value == '') {                 //--- validate fullname
+        document.getElementById("f1").style.color = "red";
+        errorMsg = "yes";
+    }
+
+    if (document.getElementById('addr').value == '') {         //--- validate address           
+        document.getElementById("f2").style.color = "red";
+        errorMsg = "yes";
+    }
+
+    if (document.form1.sex[0].checked == false &&            //--- validate sex 
+        document.form1.sex[1].checked == false    ) {  
+        document.getElementById("f3").style.color = "red";
+        errorMsg = "yes";
+    }
+
+    if (!document.getElementById('sgl').checked &&           //--- validate status 
+        !document.getElementById('mrd').checked &&
+        !document.getElementById('chd').checked    ) 
+    {
+        document.getElementById("f4").style.color = "red";
+        errorMsg = "yes";
+    }
+
+    if (document.getElementById('slctSingle').selectedIndex == 0)   //--- validate education 
+    {
+        document.getElementById("f5").style.color = "red";
+        errorMsg = "yes";
+    }
+
+    enteredHobbies = '';                                        //--- validate hobby
+    for (i = 0; i < document.getElementById("slctMulti").length; i++)
+    {
+        if (document.getElementById("slctMulti").options[i].selected == true)
+            enteredHobbies += document.form1.hobby.options[i].value + " ";
+    }
+    if (enteredHobbies == '') { 
+        document.getElementById("f6").style.color = "red";
+        errorMsg = "yes";
+    }
+
+    if (errorMsg != '') {                                   //--- if there are errors
+        document.getElementById("f7").innerHTML = "Please correct highlighted fields";
+	return(false);
+    }
+
+    submit = confirm('Please confirm your order.....');	  //--- confirm submission
+    if (submit == false)				  //    if click on Cancel
+	return(false);					  //    do not submit
+
+    return(true);
+}
+
+    
+//-->
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<input class="span1" type="text" placeholder=".span1">
+<select class="span1">
+  ...
+</select>
+<input class="span2" type="text" placeholder=".span2">
+<select class="span2">
+  ...
+</select>
+<input class="span3" type="text" placeholder=".span3">
+<select class="span3">
+  ...
+</select>
+<br><br><br><br>
+<label class="checkbox inline">
+  <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
+</label>
+<label class="checkbox inline">
+  <input type="checkbox" id="inlineCheckbox2" value="option2"> 2
+</label>
+<label class="checkbox inline">
+  <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
+</label>
+
+<br>
+<br>
+<select>
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+  <option>5</option>
+</select> <br><br>
+
+
+<tr>
+<td id="f8"><b>How would you rate this website? <br>1 beeing the worst 10 being the best<td><br>
+<select>
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+  <option>5</option>
+</select> <br><br>  
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<fieldset>
+<legend>Personal information:</legend>
+First name:<br>
+<input type="text" name="firstname" value="Mickey">
+<br>
+Last name:<br>
+<input type="text" name="lastname" value="Mouse">
+<br><br>
+<input type="submit" value="Submit">
+</fieldset>
+
+<input type="submit" value="SUBMIT">
+</form>
+</body>

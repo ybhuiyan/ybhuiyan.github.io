@@ -1,0 +1,201 @@
+ 
+<title>Contact Us</title>
+<script type="text/javascript" ></script>
+<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="nyu_final.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+
+<style>
+body  {
+    background-color: #cccccc;
+    background: url(img/ddd9.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+    .input {background-color:"#cccccc"; color:"#000000"; font-family:helvetica}
+</style>
+</head>
+
+<body>
+          <div class="row">
+           <ul class="list-inline">
+              <li><a id="my-work" href="https://my.adp.com" class="main-nav__link">MYWORK</a></li>
+               <li><a id="bbx-ybpicture" href="#!/agency" class="main-nav__link">SUDOERS</a></li>
+              <li><a id="bbx-services" href="artwork.html" class="main-nav__link">ARTWORK</a></li>
+              <li><a id="bbx-videos" href="video.html" class="main-nav__link">VIDEO</a></li>
+              <li><a id="bbx-contact" href="contact-me.html" class="main-nav__link" >CONTACT-ME</a></li>
+            </ul>
+      </div>
+<div class="container">
+ <div class="img-rounded">
+          <a id="yb-home" href="nyu_FinalProject.html" class="main-nav__link">
+            <img src="img/fire1.gif" text="YOUSUF"alt="Nature" style="width:170px;height:60px">
+          </a>
+        </div>
+<h3>Please enter your contact information</h3> 
+<form name=form1 method=POST action=/cgi-bin/sultans/formProc>
+<legend>PLease Enter Information Below</legend>
+<table>
+<tr>
+<td id="f1"><b>First Name:<td><input type=text name=fullname size=40 class=input>
+<tr>
+<td id="f1a"><b>Last Name:<td><input type=text name=lastname size=40 class=input>
+<tr>
+<td id="f1b"><b>Email Address:<td><input type=text name=address size=40 class=input>
+<tr>
+<td id="f1c"><b>Phone Number:<td><input type=text name=phonenumber size=40 class=input>
+<tr>
+<td id="f2"><b>Enter Address: <td><textarea name=address id="addr" rows=5 cols=42 class=input></textarea>
+<tr>
+<td id="f3"><b>Enter Sex:     <td><input type=radio name=sex value='M'>Male 
+                                  <input type=radio name=sex value='F'>Female 
+<tr>
+<td id="f4"><b>Enter Status:  <td><input type=checkbox name=status id="sgl" value='S'>Single
+                                  <input type=checkbox name=status id="mrd" value='M'>Married
+                                  <input type=checkbox name=status id="chd" value='C'>Wish Not to Answer                       
+<tr>
+<td id="f5"><b>Education: <td><select name=education id="slctSingle" class=input style='width:160'>
+                                <option id="none" value='0'>--Choose from below--</option> 
+                                <option id="HS"   value='HS'>High School</option> 
+                                <option id="BS"   value='BS/BA'>Bachelor of Science/Art</option>
+                                <option id="MS"   value='MS/MA'>Master of Science/Art</option>  
+                                <option id="PHD"  value='DR/PHD'>Doctor/PhD</option> 
+                            </select><br>
+<tr>
+<td id="f6"><b>Enter Hobbies: <td><select name=hobby id="slctMulti" size=3 multiple class=input style='width:160'>
+                                      <option value='read'>Reading</option> 
+                                      <option value='tv'>Television and Movies</option>
+                                      <option value='art'>Art and Theatre</option>  
+                                      <option value='sport'>Playing Sports</option> 
+                                      <option value='travel'>Traveling</option> 
+                                      <option value='shop'>Shopping</option>
+                                      <option value='sleep'>Relaxing and Sleeping</option>
+                                 </select>
+<br><br> 
+                              
+
+<tr height=20>
+<tr>
+<td><input type=submit class="btn btn-primary form-button" value='Submit' onClick=" return validate()">
+<td><input type=reset  class="btn btn-warning form-button" value='Clear'>  
+</table>
+<p id=f7 style="color:red;"></p>
+</form>
+</form>
+
+<fieldset>
+
+<img src="img/Dancing_banana.gif" text="YOUSUF"alt="Nature" style="width:80px;height:40px">
+ <span style="width:380px; color:yellow; text-align:center; left:200px "> <b> * Would you be kind to take a 3 minutes survey * </b></span>
+ <img src="img/Dancing_banana.gif" text="YOUSUF"alt="Nature" style="width:80px;height:40px"><br><br>
+<!-- <button class="btn btn-primary" href="survey2.html">TAKE SURVEY</button> -->
+<a id="surveytwo" href="survey2.html" class="btn btn-primary" >TAKE SURVEY</a></form>
+</fieldset>
+</div>
+
+
+<script>
+
+<!-- JavaScript code to validate the form entry fields ----------------------------->
+
+function validate() {
+
+    errorMsg = "";
+    errors=[];
+    document.getElementById("f1").style.color = "black";
+    document.getElementById("f1a").style.color = "black";
+    document.getElementById("f1b").style.color = "black";
+    document.getElementById("f1c").style.color = "black";
+    document.getElementById("f2").style.color = "black";
+    document.getElementById("f3").style.color = "black";
+    document.getElementById("f4").style.color = "black";
+    document.getElementById("f5").style.color = "black";
+    document.getElementById("f6").style.color = "black";
+    document.getElementById("f7").innerHTML   = "";
+
+    if (document.form1.fullname.value == '') {                 //--- validate fullname
+        document.getElementById("f1").style.color = "red";
+        errorMsg = "yes";
+        errors.push('Please enter your firs name');
+    }
+    if (document.form1.fullname.value == '') {                 //--- validate fullname
+        document.getElementById("f1a").style.color = "red";
+        errorMsg = "yes";
+        errors.push('Please enter your Last Name');
+
+    }
+        if (document.form1.fullname.value == '') {                 //--- validate fullname
+        document.getElementById("f1b").style.color = "red";
+        errorMsg = "yes";
+        errors.push('Please enter your Email');
+
+    }
+        if (document.form1.fullname.value == '') {                 //--- validate fullname
+        document.getElementById("f1c").style.color = "red";
+        errorMsg = "yes";
+        errors.push('Please enter your Phone Number');
+
+    }
+    if (document.getElementById('addr').value == '') {         //--- validate address           
+        document.getElementById("f2").style.color = "red";
+        errorMsg = "yes";
+        errors.push('Please enter your Address');
+
+    }
+
+    if (document.form1.sex[0].checked == false &&            //--- validate sex 
+        document.form1.sex[1].checked == false    ) {  
+        document.getElementById("f3").style.color = "red";
+        errorMsg = "yes";
+        errors.push('Please enter your Sex');
+    }
+
+    if (!document.getElementById('sgl').checked &&           //--- validate status 
+        !document.getElementById('mrd').checked &&
+        !document.getElementById('chd').checked    ) 
+    {
+        document.getElementById("f4").style.color = "red";
+        errorMsg = "yes";
+        errors.push('Please enter your marital Status');
+    }
+
+    if (document.getElementById('slctSingle').selectedIndex == 0)   //--- validate education 
+    {
+        document.getElementById("f5").style.color = "red";
+        errorMsg = "yes";
+    }
+
+    enteredHobbies = '';                                        //--- validate hobby
+    for (i = 0; i < document.getElementById("slctMulti").length; i++)
+    {
+        if (document.getElementById("slctMulti").options[i].selected == true)
+            enteredHobbies += document.form1.hobby.options[i].value + " ";
+    }
+    if (enteredHobbies == '') { 
+        document.getElementById("f6").style.color = "red";
+        errorMsg = "yes";
+        errors.push('Please select at least one Hobbie');
+    }
+
+    if (errorMsg != '') {                                   //--- if there are errors
+        document.getElementById("f7").innerHTML = "Please correct highlighted fields";
+        alert(errors.join ("\n"))
+	return false;
+    }
+
+    submit = confirm('Please confirm your order.....');	  //--- confirm submission
+    if (submit == false)				  //    if click on Cancel
+	return(false);					  //    do not submit
+
+    return(true);
+}
+
+    
+//-->
+</script>
+
+</body>
+</html>

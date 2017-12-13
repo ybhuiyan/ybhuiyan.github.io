@@ -28,7 +28,7 @@ body  {
               <li><a id="bbx-videos" href="video.html" class="main-nav__link">VIDEO</a></li>
               <li><a id="bbx-contact" href="contact-me.html" class="main-nav__link" >CONTACT-ME</a></li>
             </ul>
-      </div>
+         </div>
 <div class="container">
  <div class="img-rounded">
           <a id="yb-home" href="nyu_FinalProject.html" class="main-nav__link">
@@ -144,13 +144,6 @@ function validate() {
         errorMsg = "yes";
         errors.push('Please enter your Address');
 
-    }
-
-    if (document.form1.sex[0].checked == false &&            //--- validate sex 
-        document.form1.sex[1].checked == false    ) {  
-        document.getElementById("f3").style.color = "red";
-        errorMsg = "yes";
-        errors.push('Please enter your Sex');
     }
 
     if (!document.getElementById('sgl').checked &&           //--- validate status 

@@ -26,7 +26,7 @@ body  {
                <li><a id="bbx-ybpicture" href="https://www.moma.org/" class="main-nav__link">NY-Musium</a></li>
               <li><a id="bbx-services" href="artwork.html" class="main-nav__link">ARTWORK</a></li>
               <li><a id="bbx-videos" href="video.html" class="main-nav__link">VIDEO</a></li>
-              <li><a id="bbx-contact" href="contact-me.html" class="main-nav__link" >CONTACT</a></li>
+              <li><a id="bbx-contact" href="contact-me.html" class="main-nav__link" >CONTACT-ME</a></li>
             </ul>
       </div>
 <div class="container">
@@ -37,7 +37,7 @@ body  {
         </div>
 <h3>Please enter your contact information</h3> 
 <form name=form1 method=POST action=/cgi-bin/sultans/formProc>
-<legend>Or simply email us at ybbhuiyan@gmail.com </legend>
+<legend>PLease Enter Information Below</legend>
 <table>
 <tr>
 <td id="f1"><b>First Name:<td><input type=text name=fullname size=40 class=input>
@@ -48,10 +48,10 @@ body  {
 <tr>
 <td id="f1c"><b>Phone Number:<td><input type=text name=phonenumber size=40 class=input>
 <tr>
-<td id="f2"><b>Additional Comments: <td><textarea name=address id="addr" rows=5 cols=42 class=input></textarea>
+<td id="f2"><b>Enter Address: <td><textarea name=address id="addr" rows=5 cols=42 class=input></textarea>
 <tr>
-<td id="f3"><b>Interested To:     <td><input type=radio name=Buy value='S'>Sell 
-                                  <input type=radio name=interested value='B'>Buy 
+<td id="f3"><b>Enter Sex:     <td><input type=radio name=sex value='M'>Male 
+                                  <input type=radio name=sex value='F'>Female 
 <tr>
 <td id="f4"><b>Enter Status:  <td><input type=checkbox name=status id="sgl" value='S'>Single
                                   <input type=checkbox name=status id="mrd" value='M'>Married
@@ -146,11 +146,11 @@ function validate() {
 
     }
 
-    if (document.form1.interested[0].checked == false &&            //--- validate interest 
-        document.form1.interested[1].checked == false    ) {  
+    if (document.form1.sex[0].checked == false &&            //--- validate sex 
+        document.form1.sex[1].checked == false    ) {  
         document.getElementById("f3").style.color = "red";
         errorMsg = "yes";
-        errors.push('Please tell us your interest to Buy or Sell art');
+        errors.push('Please enter your Sex');
     }
 
     if (!document.getElementById('sgl').checked &&           //--- validate status 
